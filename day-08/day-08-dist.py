@@ -24,6 +24,6 @@ new_dist["key1"] = "new_value"
 #     print(f"Key: {key}, Value: {new_dist[key]}")
     
 #another loop
-for key, value in new_dist.items():
-    print(f"{key}: {value}")
+for key, value1 in new_dist.items():
+    print(f"{key}: {value1}")
 
