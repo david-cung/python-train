@@ -54,3 +54,30 @@ def information(**info):
 dist= {"name": "Nhung", "age": 30}
 
 # information(**dist)
+
+#lambda function
+#function no name, basic function
+
+nhan_doi = lambda x: x * 2
+# print(nhan_doi(5))
+
+
+#nested function
+def tinh_bieu_thuc(number1):
+    def phep_cong(number2):
+        return number1
+    return phep_cong
+
+# print(tinh_bieu_thuc(5)(3))
+
+def so_chan(a):
+    if a % 2 ==0:
+        return "day la so chan"
+    else:
+        return "day la so le"
+
+number = input("Input number: ")
+result = so_chan(int(number))
+
+print(result)
+
