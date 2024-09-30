@@ -9,8 +9,48 @@ def total(parameter1, parameter2):
     return a
 
 #call function
-totalParameter = total(1, "nhung") #1,2 doi so
+# totalParameter = total(1, "nhung") #1,2 doi so
 # print(totalParameter) 
 
+def printString():
+    print("Hello, World!")
+    print("================================")
+    print("This is a function")
+    a = 5 + 7
+    print(a)
+    return a
 
+# string = printString()
+# print(string)
+# printString()
 
+#default parameters 
+def printStringWithDefaultValue(name="Nhung"):
+    print(f"Hello, {name}!")
+
+# printStringWithDefaultValue()
+# printStringWithDefaultValue("Python")
+
+#tham so tuy y 
+# *args: truyền số lượng đối số không xác định dưới dạng tuple
+# **kwargs: truyền các đối số từ khoá không xác định dưới dạng dictionary
+
+def sum(*numbers):
+    total = 0
+    for number in numbers:
+        print(f"{number}")
+        total += number
+    return total
+
+a = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+# total = sum(*a)
+# print(total)
+
+def information(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+# information(name="Nhung", age=30, address="QN", contry= "VN")
+dist= {"name": "Nhung", "age": 30}
+
+# information(**dist)
