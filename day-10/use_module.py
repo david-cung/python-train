@@ -1,8 +1,8 @@
-import module
+from module import add
 
-module.hello()
+# import module
 
-result = module.add(10, 5)
+result = add(10, 5)
 
 print(result)
 
