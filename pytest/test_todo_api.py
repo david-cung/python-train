@@ -18,7 +18,7 @@ ENDPOINT = "https://todo.pixegami.io"
 def test_call_api_create_task():
     payload = {
       "content": "string",
-      "user_id": "1111",
+      "user_id": "user1",
       "task_id": "string",
       "is_done": False
     }
@@ -29,3 +29,23 @@ def test_call_api_create_task():
 
     status_code = response.status_code
     assert status_code == 200
+    
+    user_id = data["task"]["user_id"]
+    assert user_id == "user1"
+
+def test_call_api_get_task():
+   
+    task_id = 'task_75606a9706274644932b12edce980059'
+    response = requests.get(ENDPOINT + f"/get-task/{task_id}")
+
+    data = response.json()
+    print(data)
+
+    status_code = response.status_code
+    assert status_code == 200
+    
+    task_content = data["content"]
+    
+    assert task_content == "string1"
+    
+    
